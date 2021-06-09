@@ -27,26 +27,24 @@ void setup() {
   Serial.begin(9600);
   HTSensor.begin();
   lcd.begin(16,2);
-  digitalWrite(bl,LOW);
   delay(startUpTime); // Allows time for DHT to initalise. Needed?? Testing required.
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
 
-  /*
-  // This bit is disabled currently, as I don't actually have a DHT sensor.
-  // It's on order, but for now I'm just using fake values.
   humidity=HTSensor.readHumidity();
   tempC=HTSensor.readTemperature(false);
   tempF=HTSensor.readTemperature(true);
-  */
 
+  /* 
   // Stupid fake values for absent DHT sensor
   humidity=43;
   tempC=23.40;
   tempF=74.12; // I don't know or care if this is correct. It'll do for now.
+  */
 
+   /*
   // Send info to Serial Monitor
   Serial.print("Humidity: ");
   Serial.print(humidity);
@@ -55,6 +53,7 @@ void loop() {
   Serial.print("C/");
   Serial.print(tempF);
   Serial.println("F");
+  */
 
   // Send info to LCD
   lcd.clear();

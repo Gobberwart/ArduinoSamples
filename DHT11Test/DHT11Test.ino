@@ -37,12 +37,6 @@ void loop() {
   tempC=HTSensor.readTemperature(false);
   tempF=HTSensor.readTemperature(true);
 
-  /* 
-  // Stupid fake values for absent DHT sensor
-  humidity=43;
-  tempC=23.40;
-  tempF=74.12; // I don't know or care if this is correct. It'll do for now.
-  */
 
    /*
   // Send info to Serial Monitor
